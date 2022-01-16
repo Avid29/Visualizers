@@ -17,9 +17,8 @@ namespace Visualizers.UI.Shared.Audio.Rendering
         private AudioDeviceOutputNode _deviceOutNode;
         private AudioFrameOutputNode _frameOutNode;
         private AudioFileInputNode _fileInNode;
-        private int _quantum;
 
-        public EventHandler<float[]> FramePlayed;
+        public event EventHandler<float[]> FramePlayed;
 
         /// <summary>
         /// Initializes the <see cref="AudioRenderer"/>.
@@ -27,8 +26,6 @@ namespace Visualizers.UI.Shared.Audio.Rendering
         /// <returns>An asynchronous task that returns a status indicating the initializion success.</returns>
         public async Task<bool> InitializeAsync()
         {
-            _quantum = 0;
-
             var settings = new AudioGraphSettings(AudioRenderCategory.Media);
             settings.PrimaryRenderDevice = await GetDefaultRenderDevice();
 
