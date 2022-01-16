@@ -9,5 +9,10 @@
     <Import_RootNamespace>Visualizers.UI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Render\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Audio\Rendering\AudioGraphRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Audio\Rendering\IMemoryBufferByteAccess.cs" />
   </ItemGroup>
 </Project>
