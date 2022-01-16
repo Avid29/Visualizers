@@ -154,6 +154,13 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Visualizers\Visualizers.csproj">
+      <Project>{98ef4cb0-2cd8-433c-a3bc-729fce04b1ad}</Project>
+      <Name>Visualizers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\src\UI\Visualizers.UI.Shared\Visualizers.UI.Shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

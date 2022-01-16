@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Visualizers.UI.Shared.Audio.Rendering;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +24,24 @@ namespace Visualizers.UI.UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private AudioGraphRenderer _audioRenderer;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            Init();
+        }
+
+        private async void Init()
+        {
+            _audioRenderer = new AudioGraphRenderer();
+            await _audioRenderer.InitializeAsync();
+
+            FileOpenPicker filePicker = new FileOpenPicker();
+            filePicker.FileTypeFilter.Add(".mp3");
+            var file = await filePicker.PickSingleFileAsync();
+            _audioRenderer.PlayFile(file);
         }
     }
 }
