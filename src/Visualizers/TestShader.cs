@@ -37,7 +37,7 @@ namespace Visualizers
 
             float4 pixel = float4.Zero;
             if (v == 0) pixel = float4.One * 0.5f;
-            if (v < point) pixel = color;
+            if (v < point + .01 && v > point - .01) pixel = color;
             return pixel;
         }
     }

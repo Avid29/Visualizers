@@ -9,12 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visualizers", "src\Visualiz
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Visualizers.UI.Shared", "src\UI\Visualizers.UI.Shared\Visualizers.UI.Shared.shproj", "{BC224343-AC68-42D6-A7F7-D38EA0564654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualizers.UI.UWP", "Visualizers.UI.UWP\Visualizers.UI.UWP.csproj", "{30582BED-28D3-4B79-B0C2-BEFE306A7B8B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A339F0F0-3B2F-40E0-8A63-4410FA260445}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualizers.UI.UWP", "src\UI\Visualizers.UI.UWP\Visualizers.UI.UWP.csproj", "{30582BED-28D3-4B79-B0C2-BEFE306A7B8B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
